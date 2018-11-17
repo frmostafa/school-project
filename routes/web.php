@@ -14,7 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/login',function(){
+   return view('login.login');
+});
 Route::group(['prefix'=>'admin'],function(){
     Route::get('/users','UsersController@index');
+
+    Route::get('/student','UsersController@sindex');
+    Route::get('/teacher','UsersController@tindex');
 });
