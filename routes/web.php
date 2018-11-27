@@ -25,3 +25,6 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('/student','UsersController@sindex');
     Route::get('/teacher','UsersController@tindex');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -15,6 +15,9 @@ class CreateTeachersTable extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('tName');
+            $table->integer('mobileNumber')->nullable();
+            $table->integer('clId')->nullable();
             $table->timestamps();
         });
     }
